@@ -47,7 +47,6 @@ function Cattle() {
         <td>{item.CalvingEase}</td>
         <td>{item.Fleshing}</td>
         <td>{item.Thickness}</td>
-        <td>{item.Masculinity}</td>
         <td>
           <Link to="/" className="btn btn-success">
             Edit
@@ -91,7 +90,6 @@ function Cattle() {
                       <th>Calving Ease</th>
                       <th>Fleshing</th>
                       <th>Thickness</th>
-                      <th>Masculinity</th>
                     </tr>
                   </thead>
                   <tbody>{cattleDetails}</tbody>
