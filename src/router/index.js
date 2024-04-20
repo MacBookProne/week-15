@@ -17,7 +17,7 @@ function MyRouter() {
       <Route path="/contact-us" element={<Contact />} />
       <Route path="/cattle" element={<Cattle />} />
       <Route path="/cattle/create" element={<CattleCreate />} />
-      <Route path="/cattle/:Id/edit" element={<CattleEdit />} />
+      <Route path="/cattle/:id/edit" element={<CattleEdit />} />
       </Routes>
   );
 }

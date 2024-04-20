@@ -1,12 +1,10 @@
-//Imports
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Loading from "../components/Loading";
 
-// Component for editing cattle details
 function CattleEdit() {
-    const { id } = useParams(); // Extracting 'id' from the route parameter to identify which cattle to edit
-    const [cattle, setCattle] = useState({ // State holding the form values
+    const { id } = useParams();
+    const [cattle, setCattle] = useState({
         ID: "",
         Lot: "",
         Born: "",
@@ -22,38 +20,34 @@ function CattleEdit() {
         Thickness: "",
         Masculinity: "",
     });
-    const [loading, setLoading] = useState(false); // State to manage loading status
+    const [loading, setLoading] = useState(false);
 
-    // Effect to fetch cattle data on component mount or when id changes
     useEffect(() => {
         setLoading(true);
-        fetch(`https://662179fe27fcd16fa6c710e9.mockapi.io/cattle/api/v1/BullSale/${id}`) // API request using the cattle ID
+        fetch(`https://662179fe27fcd16fa6c710e9.mockapi.io/cattle/api/v1/BullSale/${id}`)
             .then((res) => res.json())
             .then((data) => {
-                setCattle(data); // Set fetched data to state
+                setCattle(data);
                 setLoading(false);
             })
             .catch((error) => {
-                console.error("Error fetching data:", error); // Handle any errors
+                console.error("Error fetching data:", error);
                 setLoading(false);
             });
     }, [id]);
 
-    // Handler for input changes to update state
     const handleInput = (e) => {
         const { name, value } = e.target;
         setCattle(prevCattle => ({
             ...prevCattle,
-            [name]: value // Update the specific field with the new value
+            [name]: value
         }));
     };
 
-    // Handler for form submission to save edits
     const saveCattle = (e) => {
-        e.preventDefault(); // Prevent default form submission action
-        setLoading(true); // Begin loading
+        e.preventDefault();
+        setLoading(true);
 
-        // PUT request to update cattle on the server
         fetch(`https://662179fe27fcd16fa6c710e9.mockapi.io/cattle/api/v1/BullSale/${id}`, {
             method: "PUT",
             headers: {
@@ -72,12 +66,10 @@ function CattleEdit() {
         });
     };
 
-    // Conditional rendering for loading state
     if (loading) {
-        return <Loading /> // Display loading component during data fetch/update
+        return <Loading />
     }
 
-    // Main component render
     return (
         <div>
             <h1>Edit Cattle</h1>
@@ -87,10 +79,13 @@ function CattleEdit() {
                         <div className="card">
                             <div className="card-header d-flex justify-content-between align-items-center">
                                 <h4>Edit Cattle Details</h4>
-                                <Link to="/cattle" className="btn btn-danger">Back to Cattle List</Link>
+                                <Link to="/cattle" className="btn btn-danger">
+                                    Back to Cattle List
+                                </Link>
                             </div>
                             <div className="card-body">
                                 <form onSubmit={saveCattle}>
+                                    {/* Dynamically create form fields */}
                                     {Object.keys(cattle).map((key) => (
                                         <div className="mb-3" key={key}>
                                             <label className="form-label">{key}</label>
