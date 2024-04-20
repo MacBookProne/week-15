@@ -1,11 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 
+// Imports
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Cattle from "../pages/Cattle";
 import CattleCreate from "../pages/CattleCreate";
+import CattleEdit from "../pages/CattleEdit";
 
+// Define routing for the app.
 function MyRouter() {
   return (
     <Routes>
@@ -14,7 +17,8 @@ function MyRouter() {
       <Route path="/contact-us" element={<Contact />} />
       <Route path="/cattle" element={<Cattle />} />
       <Route path="/cattle/create" element={<CattleCreate />} />
-    </Routes>
+      <Route path="/cattle/:Id/edit" element={<CattleEdit />} />
+      </Routes>
   );
 }
 
