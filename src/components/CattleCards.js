@@ -6,7 +6,7 @@ function CattleCards() {
       <div className="row">
         <div className="col-md-4">
           <div className="card">
-            <img src="../images/herd.jpg" className="card-img-top" alt="Card image cap" />
+            <img src="../images/herd.jpg" className="card-img-top" alt="A herd of cattle" />
             <div className="card-body">
               <h5 className="card-title">Contact Us</h5>
               <p className="card-text">We're eager to connect with ranchers who are looking to make their operations more enjoyable and profitable.</p>
@@ -16,7 +16,7 @@ function CattleCards() {
         </div>
         <div className="col-md-4">
           <div className="card">
-            <img src="../images/cowfield.jpg" className="card-img-top" alt="Card image cap" />
+            <img src="../images/cowfield.jpg" className="card-img-top" alt="Cattle grazing in a field" />
             <div className="card-body">
               <h5 className="card-title">Cattle Directory</h5>
               <p className="card-text">Buy your bulls from someone who raises cattle the way you ought to. Click below to inquire</p>
@@ -26,7 +26,7 @@ function CattleCards() {
         </div>
         <div className="col-md-4">
           <div className="card">
-            <img src="../images/blackandwhitecow.jpg" className="card-img-top" alt="Card image cap" />
+            <img src="../images/blackandwhitecow.jpg" className="card-img-top" alt="A black and white cow" />
             <div className="card-body">
               <h5 className="card-title">About Us</h5>
               <p className="card-text">Our goal is to empower ranchers to inject more enjoyment and profitability into their operations.</p>
