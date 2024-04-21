@@ -101,7 +101,7 @@ function Cattle() {
   // Render the component
   return (
     <div>
-      <h1>Cattle</h1>
+      <h1 className="cattle-header">Cattle lots for sale</h1>
       <div className="container mt-5">
         <div className="row">
           <div className="col-md-12">

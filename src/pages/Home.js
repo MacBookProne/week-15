@@ -1,7 +1,15 @@
+import ParallaxBanner from '../components/ParallaxBanner';
+import CattleCards from '../components/CattleCards';
+import Cattle from './Cattle';
+import "../styles.css";
+
 function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <ParallaxBanner />
+      <h1 className="homeheader">Our Operation</h1>
+      <CattleCards />
+      <Cattle />
     </div>
   );
 }

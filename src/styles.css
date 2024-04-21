@@ -1,0 +1,29 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('https://bigcreekagency.com/wp-content/uploads/2024/04/pexels-john-de-leon-142955220-10776071-scaled.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    width: 100vw;
+}
+
+.banner h2 {
+    font-size: 48px;
+    color: #343a40;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.homeheader{
+    text-align: center;
+}
+
+.cattle-header{
+    text-align: center;
+}
+
