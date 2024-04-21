@@ -41,5 +41,11 @@
     text-align: center;
 }
 
-.contact-h3{}
+.contact-h3{
+    text-align: center;
+}
+
+.mr-3 {
+    padding: 5px;
+    width: 150px;}
 
